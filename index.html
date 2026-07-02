@@ -116,7 +116,7 @@
     }
 
     .section-label {
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 500;
       color: #aaa;
       text-transform: uppercase;
@@ -128,13 +128,13 @@
 
     .grant-item {
       display: flex;
-      justify-content: flex-start;
-      align-items: baseline;
-      gap: 16px;
+      flex-direction: column;
+      gap: 0;
     }
 
-    .grant-name { font-size: 16px; font-weight: 400; color: #2a2a2a; }
-    .grant-detail { color: #aaa; font-weight: 300; font-size: 15px; }
+    .mobile-break { display: none; }
+    .grant-name-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    .grant-detail { color: #aaa; font-weight: 300; font-size: 15px; margin-top: 2px; }
     .grant-year { font-size: 16px; font-weight: 300; color: #aaa; flex-shrink: 0; }
 
     .inner-page {
@@ -198,6 +198,7 @@
       .name { font-size: 32px; }
       .affiliation { font-size: 15px; }
       .bracket-links { font-size: 13px; }
+      .mobile-break { display: inline; }
       .grant-item { text-align: left; }
       .grant-name { font-size: 14px; }
       .grant-year { font-size: 14px; }
@@ -235,7 +236,7 @@
         <!-- Bio goes here when ready -->
 
         <div class="bracket-links">
-          [email: <a href="mailto:ychoi47@gsu.edu">ychoi47@gsu.edu</a> | <a href="mailto:youngyun.ch@gmail.com">youngyun.ch@gmail.com</a>]<br>
+          [email: <a href="mailto:ychoi47@gsu.edu">ychoi47@gsu.edu</a> | <a href="mailto:youngyun.ch@gmail.com">youngyun.ch@gmail.com</a>] <span class="mobile-break"><br></span>&nbsp;
           [<a href="https://www.linkedin.com/in/young-yun-choi-a76849370" target="_blank">LinkedIn</a>] &nbsp;
           [<a href="#" target="_blank">Google Scholar</a>]
         </div>
@@ -245,16 +246,22 @@
 
         <div class="grant-list">
           <div class="grant-item">
-            <span class="grant-name">Smith Richardson Foundation, World Politics and Statecraft Fellowship <span class="grant-detail">($10,000)</span></span>
-            <span class="grant-year">2026</span>
+            <div>
+              <div class="grant-name-row"><span class="grant-name">Smith Richardson Foundation, World Politics and Statecraft Fellowship</span> <span class="grant-year">2026</span></div>
+              <div class="grant-detail">($10,000)</div>
+            </div>
           </div>
           <div class="grant-item">
-            <span class="grant-name">Korea Foundation for Advanced Studies (KFAS), Funded by SK Group, Social Innovation Research Award <span class="grant-detail">($30,000 | PI: Jeasurk Yang)</span></span>
-            <span class="grant-year">2026</span>
+            <div>
+              <div class="grant-name-row"><span class="grant-name">Korea Foundation for Advanced Studies (KFAS), Funded by SK Group, Social Innovation Research Award</span> <span class="grant-year">2026</span></div>
+              <div class="grant-detail">($30,000 | PI: Jeasurk Yang)</div>
+            </div>
           </div>
           <div class="grant-item">
-            <span class="grant-name">Economic History Association (EHA), Graduate Dissertation Fellowship <span class="grant-detail">($10,000)</span></span>
-            <span class="grant-year">2025</span>
+            <div>
+              <div class="grant-name-row"><span class="grant-name">Economic History Association (EHA), Graduate Dissertation Fellowship</span> <span class="grant-year">2025</span></div>
+              <div class="grant-detail">($10,000)</div>
+            </div>
           </div>
         </div>
       </div>
