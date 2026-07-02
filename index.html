@@ -4,19 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Young-Yun Choi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       font-weight: 300;
       background: #ffffff;
       color: #222;
       min-height: 100vh;
     }
 
-    /* ── Navigation ── */
     nav {
       display: flex;
       justify-content: space-between;
@@ -26,40 +24,31 @@
     }
 
     .nav-name {
-      font-family: 'Libre Baskerville', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 22px;
-      font-weight: 600;
+      font-weight: 700;
       color: #111;
       letter-spacing: 0.01em;
-      text-decoration: none;
       cursor: pointer;
     }
 
-    .nav-tabs {
-      display: flex;
-      gap: 40px;
-    }
+    .nav-tabs { display: flex; gap: 40px; }
 
     .nav-tabs a {
-      font-family: 'DM Sans', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       font-size: 18px;
       font-weight: 400;
       color: #666;
       text-decoration: none;
-      letter-spacing: 0.01em;
       transition: color 0.15s ease;
     }
 
     .nav-tabs a:hover,
-    .nav-tabs a.active {
-      color: #111;
-    }
+    .nav-tabs a.active { color: #111; }
 
-    /* ── Pages ── */
     .page { display: none; }
     .page.active { display: block; }
 
-    /* ── Home ── */
     #home .container {
       display: flex;
       gap: 90px;
@@ -73,12 +62,10 @@
 
     .photo-wrap {
       width: 260px;
-      height: 340px;
+      aspect-ratio: 3 / 4;
       background: #f0f0f0;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-shrink: 0;
     }
 
     .photo-wrap img {
@@ -86,15 +73,15 @@
       height: 100%;
       object-fit: cover;
       object-position: center top;
+      display: block;
     }
 
-    /* ── Home content ── */
     .info-col { flex: 1; padding-top: 4px; }
 
     .name {
-      font-family: 'Libre Baskerville', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 42px;
-      font-weight: 600;
+      font-weight: 700;
       color: #111;
       letter-spacing: -0.01em;
       margin-bottom: 10px;
@@ -106,15 +93,6 @@
       color: #777;
       margin-bottom: 20px;
       line-height: 1.6;
-    }
-
-    .bio {
-      font-size: 18px;
-      font-weight: 300;
-      color: #333;
-      line-height: 1.85;
-      max-width: 560px;
-      margin-bottom: 24px;
     }
 
     .bracket-links {
@@ -155,20 +133,9 @@
       gap: 20px;
     }
 
-    .grant-name {
-      font-size: 17px;
-      font-weight: 400;
-      color: #2a2a2a;
-    }
+    .grant-name { font-size: 17px; font-weight: 400; color: #2a2a2a; }
+    .grant-year { font-size: 16px; font-weight: 300; color: #aaa; flex-shrink: 0; }
 
-    .grant-year {
-      font-size: 16px;
-      font-weight: 300;
-      color: #aaa;
-      flex-shrink: 0;
-    }
-
-    /* ── Inner pages ── */
     .inner-page {
       padding: 80px 80px;
       max-width: 1100px;
@@ -176,96 +143,71 @@
     }
 
     .page-title {
-      font-family: 'Libre Baskerville', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 28px;
-      font-weight: 600;
+      font-weight: 700;
       color: #111;
       margin-bottom: 36px;
-      letter-spacing: -0.01em;
     }
 
-    .placeholder-text {
-      font-size: 17px;
-      font-weight: 300;
-      color: #999;
-      line-height: 1.8;
-    }
+    .placeholder-text { font-size: 17px; font-weight: 300; color: #999; line-height: 1.8; }
 
     .paper-list { display: flex; flex-direction: column; gap: 32px; }
 
+    .paper-item { display: flex; gap: 14px; }
+
+    .paper-arrow { color: #1a4f8a; font-size: 16px; margin-top: 3px; flex-shrink: 0; }
+
+    .paper-body { flex: 1; }
+
     .paper-title {
-      font-size: 18px;
-      font-weight: 500;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 17px;
+      font-weight: 700;
       color: #111;
-      margin-bottom: 6px;
-      line-height: 1.5;
+      margin-bottom: 7px;
+      line-height: 1.45;
     }
 
-    .paper-authors {
-      font-size: 16px;
+    .paper-line1 {
+      font-size: 14px;
       font-weight: 300;
-      color: #555;
+      color: #666;
+      font-style: italic;
       margin-bottom: 4px;
     }
 
-    .paper-authors strong {
-      font-weight: 500;
-      color: #333;
-    }
+    .paper-line1 strong { font-style: normal; font-weight: 500; color: #444; }
 
-    .paper-status {
-      font-size: 15px;
-      font-weight: 300;
-      color: #999;
-      font-style: italic;
-    }
+    .paper-line2 { font-size: 14px; font-weight: 300; color: #666; }
 
-    .media-section {
-      margin-top: 52px;
-    }
+    .paper-line2 a { color: #1a4f8a; text-decoration: none; font-style: normal; }
+    .paper-line2 a:hover { text-decoration: underline; }
 
-    .media-list { display: flex; flex-direction: column; gap: 10px; margin-top: 0; }
+    .pipe { margin: 0 8px; color: #bbb; }
 
-    .media-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 20px;
-    }
-
-    .media-name {
-      font-size: 17px;
-      font-weight: 400;
-      color: #2a2a2a;
-    }
-
-    .media-name a {
-      color: #1a4f8a;
-      text-decoration: none;
-    }
-
-    .media-name a:hover { text-decoration: underline; }
-
-    .media-year {
-      font-size: 16px;
-      font-weight: 300;
-      color: #aaa;
-      flex-shrink: 0;
-    }
-
-    /* ── Responsive ── */
     @media (max-width: 768px) {
-      nav { padding: 18px 28px; }
-      .nav-tabs { gap: 24px; }
-      #home .container { flex-direction: column; padding: 40px 28px; gap: 32px; }
-      .photo-wrap { width: 160px; height: 200px; }
-      .inner-page { padding: 40px 28px; }
+      nav { padding: 16px 20px; flex-wrap: wrap; gap: 12px; }
+      .nav-name { font-size: 17px; }
+      .nav-tabs { gap: 16px; }
+      .nav-tabs a { font-size: 15px; }
+      #home .container { flex-direction: column; padding: 32px 20px; gap: 28px; align-items: center; }
+      .photo-wrap { width: 75vw; max-width: 280px; }
+      .info-col { padding-top: 0; }
+      .name { font-size: 28px; }
+      .affiliation { font-size: 15px; }
+      .bracket-links { font-size: 15px; }
+      .grant-name { font-size: 14px; }
+      .grant-year { font-size: 13px; }
+      .inner-page { padding: 32px 20px; }
+      .page-title { font-size: 22px; }
+      .paper-title { font-size: 15px; }
+      .paper-line1, .paper-line2 { font-size: 13px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <span class="nav-name" onclick="showPage('home')">Young-Yun Choi</span>
     <div class="nav-tabs">
@@ -275,10 +217,8 @@
     </div>
   </nav>
 
-  <!-- Home -->
   <div id="home" class="page active">
     <div class="container">
-
       <div class="photo-col">
         <div class="photo-wrap">
           <img src="headshot.jpg" alt="Young-Yun Choi">
@@ -315,35 +255,25 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- Research -->
   <div id="research" class="page">
     <div class="inner-page">
       <div class="page-title">Research</div>
       <div class="paper-list">
         <div class="paper-item">
-          <div class="paper-title">Measuring Market Activity with AI and High-Resolution Satellite Imagery: Evidence from North Korea</div>
-          <div class="paper-authors">Jeasurk Yang, <strong>Young-Yun Choi</strong>, Sumin Lee, Meeyoung Cha</div>
-          <div class="paper-status">Under Review</div>
-        </div>
-      </div>
-
-      <div class="media-section">
-        <div class="section-label">Media Coverage</div>
-        <div class="media-list">
-          <div class="media-item">
-            <span class="media-name"><a href="https://www.joongang.co.kr/article/25414528" target="_blank">중앙일보 (JoongAng Ilbo)</a></span>
-            <span class="media-year">2026</span>
+          <div class="paper-arrow">→</div>
+          <div class="paper-body">
+            <div class="paper-title">Measuring Market Activity with AI and High-Resolution Satellite Imagery: Evidence from North Korea</div>
+            <div class="paper-line1">Under Review <span class="pipe">|</span> Jeasurk Yang, <strong>Young-Yun Choi</strong>, Sumin Lee, Meeyoung Cha</div>
+            <div class="paper-line2">Media: <a href="https://www.joongang.co.kr/article/25414528" target="_blank">중앙일보 (JoongAng Ilbo)</a> <span class="pipe">|</span> <a href="https://www.chosun.com/economy/industry-company/2026/06/24/7NJVHTD5QFEKHNUPLATIKJJYFA/" target="_blank">조선일보 (Chosun Ilbo)</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Teaching -->
   <div id="teaching" class="page">
     <div class="inner-page">
       <div class="page-title">Teaching</div>
@@ -351,7 +281,6 @@
     </div>
   </div>
 
-  <!-- CV -->
   <div id="cv" class="page">
     <div class="inner-page">
       <div class="page-title">CV</div>
