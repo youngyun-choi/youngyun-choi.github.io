@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Young-Yun Choi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 300;
+      background: #ffffff;
+      color: #222;
+      min-height: 100vh;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 60px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .nav-name {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #111;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-tabs a {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #666;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.15s ease;
+    }
+
+    .nav-tabs a:hover,
+    .nav-tabs a.active {
+      color: #111;
+    }
+
+    /* ── Pages ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── Home ── */
+    #home .container {
+      display: flex;
+      gap: 56px;
+      align-items: flex-start;
+      padding: 64px 60px 72px;
+      max-width: 960px;
+    }
+
+    .photo-col { flex-shrink: 0; }
+
+    .photo-wrap {
+      width: 160px;
+      height: 200px;
+      background: #f0f0f0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-placeholder {
+      font-size: 56px;
+      color: #bbb;
+    }
+
+    .contact-links {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .contact-links a {
+      font-size: 12px;
+      color: #555;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .contact-links a:hover { color: #111; }
+
+    /* ── Home content ── */
+    .info-col { flex: 1; padding-top: 4px; }
+
+    .name {
+      font-family: 'Lora', serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: #111;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+
+    .affiliation {
+      font-size: 14px;
+      font-weight: 400;
+      color: #777;
+      margin-bottom: 26px;
+      line-height: 1.5;
+    }
+
+    .bio {
+      font-size: 15px;
+      font-weight: 300;
+      color: #333;
+      line-height: 1.85;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .bracket-links {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    .bracket-links a {
+      color: #1a4f8a;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .bracket-links a:hover { color: #0d2e54; text-decoration: underline; }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin-bottom: 22px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .grant-list { display: flex; flex-direction: column; gap: 11px; }
+
+    .grant-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+
+    .grant-name {
+      font-size: 14px;
+      font-weight: 400;
+      color: #2a2a2a;
+    }
+
+    .grant-year {
+      font-size: 13px;
+      font-weight: 300;
+      color: #aaa;
+      flex-shrink: 0;
+    }
+
+    /* ── Inner pages ── */
+    .inner-page {
+      padding: 64px 60px 72px;
+      max-width: 760px;
+    }
+
+    .page-title {
+      font-family: 'Lora', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+
+    .placeholder-text {
+      font-size: 14px;
+      font-weight: 300;
+      color: #999;
+      line-height: 1.8;
+    }
+
+    .paper-list { display: flex; flex-direction: column; gap: 28px; }
+
+    .paper-item {}
+
+    .paper-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: #111;
+      margin-bottom: 5px;
+      line-height: 1.5;
+    }
+
+    .paper-meta {
+      font-size: 13px;
+      font-weight: 300;
+      color: #888;
+    }
+
+    .paper-meta a {
+      color: #1a4f8a;
+      text-decoration: none;
+    }
+
+    .paper-meta a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      nav { padding: 18px 24px; }
+      .nav-tabs { gap: 20px; }
+      #home .container { flex-direction: column; padding: 40px 24px; gap: 32px; }
+      .photo-wrap { width: 120px; height: 150px; }
+      .inner-page { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <span class="nav-name" onclick="showPage('home')">Young-Yun Choi</span>
+    <div class="nav-tabs">
+      <a href="#" onclick="showPage('research')" id="tab-research">Research</a>
+      <a href="#" onclick="showPage('teaching')" id="tab-teaching">Teaching</a>
+      <a href="#" onclick="showPage('cv')" id="tab-cv">CV</a>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <div id="home" class="page active">
+    <div class="container">
+
+      <div class="photo-col">
+        <div class="photo-wrap">
+          <!-- Replace src with your photo file name, e.g. src="photo.jpg" -->
+          <span class="photo-placeholder">☺</span>
+        </div>
+
+      </div>
+
+      <div class="info-col">
+        <div class="name">Young-Yun Choi</div>
+        <div class="affiliation">Ph.D. Candidate, Department of Economics<br>Georgia State University</div>
+
+        <div class="bracket-links">
+          [<a href="mailto:your@email.com">e-mail</a>] &nbsp;
+          [<a href="cv.pdf" target="_blank">CV</a>] &nbsp;
+          [<a href="#" target="_blank">Google Scholar</a>]
+        </div>
+
+        <hr class="section-divider">
+        <div class="section-label">Grants &amp; Fellowships</div>
+
+        <div class="grant-list">
+          <div class="grant-item">
+            <span class="grant-name">Smith Richardson Foundation, World Politics and Statecraft Fellowship ($10,000)</span>
+            <span class="grant-year">2026–2027</span>
+          </div>
+          <div class="grant-item">
+            <span class="grant-name">Economic History Association (EHA), Graduate Dissertation Fellowship ($10,000)</span>
+            <span class="grant-year">2025–2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Research -->
+  <div id="research" class="page">
+    <div class="inner-page">
+      <div class="page-title">Research</div>
+      <div class="paper-list">
+        <div class="paper-item">
+          <div class="paper-title">Working Paper Title One</div>
+          <div class="paper-meta"><a href="#">PDF</a> &nbsp;·&nbsp; Abstract coming soon</div>
+        </div>
+        <div class="paper-item">
+          <div class="paper-title">Working Paper Title Two</div>
+          <div class="paper-meta"><a href="#">PDF</a> &nbsp;·&nbsp; Abstract coming soon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teaching -->
+  <div id="teaching" class="page">
+    <div class="inner-page">
+      <div class="page-title">Teaching</div>
+      <p class="placeholder-text">Teaching information coming soon.</p>
+    </div>
+  </div>
+
+  <!-- CV -->
+  <div id="cv" class="page">
+    <div class="inner-page">
+      <div class="page-title">CV</div>
+      <p class="placeholder-text">
+        Download my CV <a href="cv.pdf" target="_blank" style="color:#1a4f8a;">here</a>.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-tabs a').forEach(a => a.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      const tab = document.getElementById('tab-' + id);
+      if (tab) tab.classList.add('active');
+      event.preventDefault();
+    }
+  </script>
+
+</body>
+</html>
