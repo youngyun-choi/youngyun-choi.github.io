@@ -141,6 +141,8 @@
 
     .mobile-break { display: none; }
     .mobile-br { display: none; }
+    .mobile-only { display: none; }
+    .desktop-only { display: inline; }
     .grant-name { font-size: 15px; font-weight: 400; color: #2a2a2a; }
     .grant-detail { color: #aaa; font-weight: 300; font-size: 14px; margin-top: 2px; }
     .grant-year { font-size: 15px; font-weight: 300; color: #aaa; flex-shrink: 0; }
@@ -208,6 +210,8 @@
       .bracket-links { font-size: 13px; }
       .mobile-break { display: inline; }
       .mobile-br { display: inline; }
+      .mobile-only { display: block; }
+      .desktop-only { display: none; }
       .grant-item { text-align: left; }
       .grant-name { font-size: 14px; }
       .grant-year { font-size: 14px; }
@@ -255,22 +259,16 @@
 
         <div class="grant-list">
           <div class="grant-item">
-            <div>
-              <div class="grant-name">Smith Richardson Foundation,<span class="mobile-br"><br></span> World Politics and Statecraft Fellowship</div>
-              <div class="grant-detail">($10,000 | 2026)</div>
-            </div>
+            <div class="grant-name">Smith Richardson Foundation,<span class="mobile-br"><br></span> World Politics and Statecraft Fellowship <span class="grant-detail desktop-only">($10,000 | 2026)</span></div>
+            <div class="grant-detail mobile-only">($10,000 | 2026)</div>
           </div>
           <div class="grant-item">
-            <div>
-              <div class="grant-name">Korea Foundation for Advanced Studies (KFAS), Funded by SK Group,<br>Social Innovation Research Award</div>
-              <div class="grant-detail">($30,000 | PI: Jeasurk Yang | 2026)</div>
-            </div>
+            <div class="grant-name">Korea Foundation for Advanced Studies (KFAS), Funded by SK Group,<br>Social Innovation Research Award <span class="grant-detail desktop-only">($30,000 | PI: Jeasurk Yang | 2026)</span></div>
+            <div class="grant-detail mobile-only">($30,000 | PI: Jeasurk Yang | 2026)</div>
           </div>
           <div class="grant-item">
-            <div>
-              <div class="grant-name">Economic History Association (EHA), Graduate Dissertation Fellowship</div>
-              <div class="grant-detail">($10,000 | 2025)</div>
-            </div>
+            <div class="grant-name">Economic History Association (EHA), Graduate Dissertation Fellowship <span class="grant-detail desktop-only">($10,000 | 2025)</span></div>
+            <div class="grant-detail mobile-only">($10,000 | 2025)</div>
           </div>
         </div>
       </div>
