@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Young-Yun Choi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -25,9 +25,9 @@
     }
 
     .nav-name {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      font-size: 22px;
-      font-weight: 600;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 20px;
+      font-weight: 700;
       color: #111;
       cursor: pointer;
     }
@@ -78,13 +78,12 @@
     .info-col { flex: 1; padding-top: 4px; }
 
     .name {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Libre Baskerville', serif;
       font-size: 42px;
-      font-weight: 300;
+      font-weight: 700;
       color: #111;
       line-height: 1.15;
       margin-bottom: 10px;
-      letter-spacing: 0.02em;
     }
 
     .affiliation {
@@ -135,6 +134,7 @@
     }
 
     .grant-name { font-size: 16px; font-weight: 400; color: #2a2a2a; }
+    .grant-detail { color: #aaa; font-weight: 300; }
     .grant-year { font-size: 16px; font-weight: 300; color: #aaa; flex-shrink: 0; }
 
     .inner-page {
@@ -144,13 +144,12 @@
     }
 
     .page-title {
-      font-family: 'Lato', sans-serif;
-      font-size: 28px;
-      font-weight: 300;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 26px;
+      font-weight: 700;
       color: #111;
       margin-bottom: 36px;
       line-height: 1.3;
-      letter-spacing: 0.02em;
     }
 
     .placeholder-text { font-size: 16px; font-weight: 300; color: #999; line-height: 1.8; }
@@ -246,15 +245,15 @@
 
         <div class="grant-list">
           <div class="grant-item">
-            <span class="grant-name">Smith Richardson Foundation, World Politics and Statecraft Fellowship ($10,000)</span>
+            <span class="grant-name">Smith Richardson Foundation, World Politics and Statecraft Fellowship <span class="grant-detail">($10,000)</span></span>
             <span class="grant-year">2026</span>
           </div>
           <div class="grant-item">
-            <span class="grant-name">Korea Foundation for Advanced Studies (KFAS), Funded by SK Group, Social Innovation Research Award (PI: Jeasurk Yang)</span>
+            <span class="grant-name">Korea Foundation for Advanced Studies (KFAS), Funded by SK Group, Social Innovation Research Award <span class="grant-detail">($30,000 · PI: Jeasurk Yang)</span></span>
             <span class="grant-year">2026</span>
           </div>
           <div class="grant-item">
-            <span class="grant-name">Economic History Association (EHA), Graduate Dissertation Fellowship ($10,000)</span>
+            <span class="grant-name">Economic History Association (EHA), Graduate Dissertation Fellowship <span class="grant-detail">($10,000)</span></span>
             <span class="grant-year">2025</span>
           </div>
         </div>
@@ -265,6 +264,7 @@
   <div id="research" class="page">
     <div class="inner-page">
       <div class="page-title">Research</div>
+      <div class="section-label" style="margin-bottom: 24px;">Working Papers</div>
       <div class="paper-list">
         <div class="paper-item">
           <div class="paper-arrow">→</div>
