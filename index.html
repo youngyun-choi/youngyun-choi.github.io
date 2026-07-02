@@ -188,16 +188,16 @@
     .pipe { margin: 0 8px; color: #bbb; }
 
     @media (max-width: 768px) {
-      nav { padding: 16px 20px; flex-wrap: wrap; gap: 12px; }
-      .nav-name { font-size: 17px; }
-      .nav-tabs { gap: 16px; margin-left: auto; }
-      .nav-tabs a { font-size: 14px; }
+      nav { padding: 16px 20px; flex-wrap: nowrap; gap: 12px; align-items: center; }
+      .nav-name { font-size: 15px; white-space: nowrap; }
+      .nav-tabs { gap: 12px; margin-left: auto; flex-shrink: 0; }
+      .nav-tabs a { font-size: 13px; white-space: nowrap; }
       #home .container { flex-direction: column; padding: 32px 20px; gap: 28px; align-items: center; }
       .photo-wrap { width: 75vw; max-width: 280px; }
       .info-col { padding-top: 0; text-align: center; }
       .name { font-size: 32px; }
       .affiliation { font-size: 15px; }
-      .bracket-links { font-size: 14px; }
+      .bracket-links { font-size: 13px; }
       .grant-item { text-align: left; }
       .grant-name { font-size: 14px; }
       .grant-year { font-size: 14px; }
