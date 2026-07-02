@@ -21,13 +21,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 60px;
+      padding: 24px 80px;
       border-bottom: 1px solid #e8e8e8;
     }
 
     .nav-name {
       font-family: 'Lora', serif;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 600;
       color: #111;
       letter-spacing: 0.01em;
@@ -37,12 +37,12 @@
 
     .nav-tabs {
       display: flex;
-      gap: 32px;
+      gap: 40px;
     }
 
     .nav-tabs a {
       font-family: 'Source Sans 3', sans-serif;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
       color: #666;
       text-decoration: none;
@@ -62,17 +62,18 @@
     /* ── Home ── */
     #home .container {
       display: flex;
-      gap: 56px;
+      gap: 64px;
       align-items: flex-start;
-      padding: 64px 60px 72px;
-      max-width: 960px;
+      padding: 80px 80px 80px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     .photo-col { flex-shrink: 0; }
 
     .photo-wrap {
-      width: 160px;
-      height: 200px;
+      width: 280px;
+      height: 360px;
       background: #f0f0f0;
       overflow: hidden;
       display: flex;
@@ -86,60 +87,30 @@
       object-fit: cover;
     }
 
-    .photo-placeholder {
-      font-size: 56px;
-      color: #bbb;
-    }
-
-    .contact-links {
-      margin-top: 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .contact-links a {
-      font-size: 12px;
-      color: #555;
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .contact-links a:hover { color: #111; }
-
     /* ── Home content ── */
     .info-col { flex: 1; padding-top: 4px; }
 
     .name {
       font-family: 'Lora', serif;
-      font-size: 36px;
+      font-size: 42px;
       font-weight: 600;
       color: #111;
       letter-spacing: -0.01em;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     .affiliation {
-      font-size: 17px;
+      font-size: 19px;
       font-weight: 400;
       color: #777;
-      margin-bottom: 26px;
-      line-height: 1.5;
-    }
-
-    .bio {
-      font-size: 15px;
-      font-weight: 300;
-      color: #333;
-      line-height: 1.85;
-      max-width: 520px;
       margin-bottom: 28px;
+      line-height: 1.6;
     }
 
     .bracket-links {
-      font-size: 16px;
+      font-size: 18px;
       color: #444;
-      margin-bottom: 40px;
+      margin-bottom: 44px;
     }
 
     .bracket-links a {
@@ -153,7 +124,7 @@
     .section-divider {
       border: none;
       border-top: 1px solid #e8e8e8;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .section-label {
@@ -162,26 +133,26 @@
       color: #aaa;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
-    .grant-list { display: flex; flex-direction: column; gap: 11px; }
+    .grant-list { display: flex; flex-direction: column; gap: 14px; }
 
     .grant-item {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 16px;
+      gap: 20px;
     }
 
     .grant-name {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 400;
       color: #2a2a2a;
     }
 
     .grant-year {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 300;
       color: #aaa;
       flex-shrink: 0;
@@ -189,40 +160,39 @@
 
     /* ── Inner pages ── */
     .inner-page {
-      padding: 64px 60px 72px;
-      max-width: 760px;
+      padding: 80px 80px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
     .page-title {
       font-family: 'Lora', serif;
-      font-size: 22px;
+      font-size: 28px;
       font-weight: 600;
       color: #111;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
       letter-spacing: -0.01em;
     }
 
     .placeholder-text {
-      font-size: 14px;
+      font-size: 17px;
       font-weight: 300;
       color: #999;
       line-height: 1.8;
     }
 
-    .paper-list { display: flex; flex-direction: column; gap: 28px; }
-
-    .paper-item {}
+    .paper-list { display: flex; flex-direction: column; gap: 32px; }
 
     .paper-title {
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 500;
       color: #111;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       line-height: 1.5;
     }
 
     .paper-meta {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 300;
       color: #888;
     }
@@ -235,12 +205,12 @@
     .paper-meta a:hover { text-decoration: underline; }
 
     /* ── Responsive ── */
-    @media (max-width: 640px) {
-      nav { padding: 18px 24px; }
-      .nav-tabs { gap: 20px; }
-      #home .container { flex-direction: column; padding: 40px 24px; gap: 32px; }
-      .photo-wrap { width: 120px; height: 150px; }
-      .inner-page { padding: 40px 24px; }
+    @media (max-width: 768px) {
+      nav { padding: 18px 28px; }
+      .nav-tabs { gap: 24px; }
+      #home .container { flex-direction: column; padding: 40px 28px; gap: 32px; }
+      .photo-wrap { width: 160px; height: 200px; }
+      .inner-page { padding: 40px 28px; }
     }
   </style>
 </head>
@@ -262,10 +232,8 @@
 
       <div class="photo-col">
         <div class="photo-wrap">
-          <!-- Replace src with your photo file name, e.g. src="photo.jpg" -->
           <img src="headshot.jpg" alt="Young-Yun Choi">
         </div>
-
       </div>
 
       <div class="info-col">
@@ -274,7 +242,7 @@
 
         <div class="bracket-links">
           [<a href="mailto:your@email.com">e-mail</a>] &nbsp;
-          [<a href="cv.pdf" target="_blank">CV</a>] &nbsp;
+          [<a href="#" target="_blank">LinkedIn</a>] &nbsp;
           [<a href="#" target="_blank">Google Scholar</a>]
         </div>
 
