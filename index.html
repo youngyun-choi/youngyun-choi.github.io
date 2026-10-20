@@ -99,7 +99,7 @@
       color: #333;
       line-height: 1.6;
       margin-top: 18px;
-      margin-bottom: 22px;
+      margin-bottom: 14px;
     }
 
     .bio p { margin-bottom: 10px; }
@@ -108,7 +108,7 @@
     .research-fields {
       font-size: 15px;
       color: #333;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
     }
 
     .fields-label {
@@ -150,7 +150,7 @@
     }
 
     .research-section-title {
-      font-size: 23px;
+      font-size: 22px;
       font-weight: 700;
       color: #777;
       margin-bottom: 20px;
@@ -238,6 +238,49 @@
 
     .pipe { margin: 0 8px; color: #bbb; }
 
+    /* About page */
+    .about-text {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.75;
+      max-width: 720px;
+      margin-bottom: 52px;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-photos {
+      display: flex;
+      gap: 24px;
+    }
+
+    .about-photo-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-photo-item img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .about-caption {
+      font-size: 13px;
+      color: #999;
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
     @media (max-width: 768px) {
       nav { padding: 20px 20px; flex-wrap: nowrap; gap: 12px; align-items: center; }
       .nav-name { font-size: 15px; white-space: nowrap; }
@@ -261,6 +304,7 @@
       .paper-title { font-size: 17px; }
       .paper-line1, .paper-line2 { font-size: 15px; }
       .paper-arrow { display: none; }
+      .about-photos { flex-direction: column; gap: 32px; }
     }
   </style>
 </head>
@@ -289,13 +333,13 @@
 
         <div class="bio">
           <p>I am an applied microeconomist. My research examines what drives economic development and contributes to persistent inequality through three complementary strands: (i) the role of information and technology, (ii) the long-run effects of institutions and place-based policies, and (iii) economic measurement using satellite imagery, remote sensing, geospatial data, and artificial intelligence.</p>
-          <p>Together, these approaches make it possible to study questions and settings where conventional data are limited or unavailable. Each research strand has received external funding: the Smith Richardson Foundation (SRF) for information and technology, the Economic History Association (EHA) for institutions, and the Korea Foundation for Advanced Studies (KFAS) Social Innovation Award for economic measurement.</p>
+          <p>Together, these approaches make it possible to study questions and settings where conventional data are limited or unavailable. Each research strand has received external support: the Smith Richardson Foundation (SRF) for information and technology, the Economic History Association (EHA) for institutions, and the Korea Foundation for Advanced Studies (KFAS) Social Innovation Award for economic measurement.</p>
         </div>
 
         <div class="research-fields"><span class="fields-label">Research Fields:</span> Development Economics, Urban Economics, Economic History</div>
 
         <div class="contact-line">
-          <strong>Contact:</strong> youngyun.ch [at] gmail.com &nbsp;
+          <strong>Contact:</strong> youngyun.ch at gmail.com &nbsp;
           [<a href="https://www.linkedin.com/in/young-yun-choi-a76849370" target="_blank">LinkedIn</a>]
           [<a href="https://scholar.google.com/citations?user=CqbSoDYAAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>]
         </div>
@@ -383,7 +427,28 @@
   <div id="about" class="page">
     <div class="inner-page">
       <div class="page-title">About</div>
-      <p class="placeholder-text">About coming soon.</p>
+
+      <div class="about-text">
+        <p>My research interests grow out of personal and professional experience.</p>
+        <p>As a South Korean high school student, I visited North Korea as a prize from a television quiz show (KBS Golden Bell, a nationally televised academic quiz competition). Seeing firsthand the sobering gap in living standards between the two Koreas made me ask why, despite their shared history, culture, and ethnicity, they had followed such different development paths. It also made me realize that where we are born, something none of us chooses, determines much of the opportunity we have. That early experience has grown into my research on how institutions and technology shape economic development and contribute to persistent inequality across diverse settings.</p>
+        <p>Before my Ph.D., I conducted policy research with government officials at the Korea Development Institute (KDI), South Korea's leading economic think tank, and with international organizations such as UN FAO. There, I often saw consequential decisions made with little reliable evidence — a gap that limited policymakers' ability to understand socioeconomic conditions and design consistent policies grounded in evidence. My long-term goal is to contribute to narrowing this gap through rigorous empirical research that informs policymaking in data-scarce settings and, ultimately, expands economic opportunity for people whose lives are shaped by circumstances they did not choose.</p>
+      </div>
+
+      <div class="about-photos">
+        <div class="about-photo-item">
+          <img src="thailand.jpg" alt="Fieldwork, Thailand">
+          <div class="about-caption"><em>Fieldwork, Thailand</em></div>
+        </div>
+        <div class="about-photo-item">
+          <img src="nepal.jpg" alt="Fieldwork, Nepal">
+          <div class="about-caption"><em>Fieldwork, Nepal</em></div>
+        </div>
+        <div class="about-photo-item">
+          <img src="kdi.jpg" alt="Fieldwork, China–North Korea border">
+          <div class="about-caption"><em>Fieldwork, China–North Korea border</em></div>
+        </div>
+      </div>
+
     </div>
   </div>
 
