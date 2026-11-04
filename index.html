@@ -208,7 +208,7 @@
     .placeholder-text { font-size: 16px; font-weight: 300; color: #999; line-height: 1.8; }
 
     /* Market figure */
-    .market-figure { margin-top: 56px; max-width: 720px; }
+    .market-figure { margin-top: 56px; }
     .market-photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
     .market-photo-item img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
     .market-caption { margin-top: 12px; }
@@ -288,6 +288,14 @@
       margin-top: 10px;
       max-width: 860px;
     }
+
+    /* Abstract toggle on the same line as "Job Market Paper" */
+    details.abstract.inline { display: inline; margin-top: 0; }
+    details.abstract.inline summary { display: inline; list-style: none; }
+    details.abstract.inline summary::-webkit-details-marker { display: none; }
+    details.abstract.inline summary::before { content: "\25B8\00a0"; }
+    details.abstract.inline[open] summary::before { content: "\25BE\00a0"; }
+    details.abstract.inline p { display: block; }
 
     /* About page */
     .about-text {
@@ -411,11 +419,10 @@
         <div class="paper-item">
           <div class="paper-body">
             <div class="paper-title">Information Frictions and the Expansion of Markets: Evidence from Mobile Phone Access in North Korea</div>
-            <div class="paper-line1"><em>Job Market Paper</em></div>
-            <details class="abstract">
+            <div class="paper-line1"><em>Job Market Paper</em> &nbsp;|&nbsp; <details class="abstract inline">
               <summary>Abstract</summary>
               <p>Do information frictions limit the extent of markets? Existing evidence shows that lower information costs improve market efficiency, but whether they also expand market activity remains far less clear. I examine this question using the staggered rollout of North Korea's first public mobile-phone network, which sharply reduced information costs in an economy where restrictions on mobility, media, and communication had long confined most information to people's own localities. A sequential search model illustrates how lower search costs allow producers to search longer and reject low offers, raising the expected net selling price and thereby strengthening incentives to produce for the market. Using satellite imagery, I reconstruct the installation timing of more than 1,100 cell towers and measure two dimensions of market activity: agricultural activity, proxied by a vegetation index, and exchange, captured by the physical footprints of 536 marketplaces identified through deep learning. Consistent with the model's incentive mechanism, higher levels of mobile-phone access increased agricultural activity on sloping land, where households can cultivate private plots and retain the returns. Each additional cell tower also expanded marketplace area by the equivalent of about 198 stalls, almost entirely through the emergence of new marketplaces near existing ones. These effects were larger in counties with rail stations and in those closer to cities, suggesting that mobile connectivity complements physical connectivity. These findings show that easier access to information can expand markets and stimulate local economic activity, even under severe institutional constraints.</p>
-            </details>
+            </details></div>
           </div>
         </div>
 
