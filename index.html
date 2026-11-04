@@ -208,7 +208,7 @@
     .placeholder-text { font-size: 16px; font-weight: 300; color: #999; line-height: 1.8; }
 
     /* Market figure */
-    .market-figure { margin-top: 56px; }
+    .market-figure { margin-top: 56px; max-width: 800px; }
     .market-photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
     .market-photo-item img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
     .market-caption { margin-top: 12px; }
@@ -291,7 +291,7 @@
 
     /* Abstract toggle on the same line as "Job Market Paper" */
     details.abstract.inline { display: inline; margin-top: 0; }
-    details.abstract.inline summary { display: inline; list-style: none; }
+    details.abstract.inline summary { display: inline; list-style: none; color: #1a4f8a; font-weight: 400; cursor: pointer; }
     details.abstract.inline summary::-webkit-details-marker { display: none; }
     details.abstract.inline summary::before { content: "\25B8\00a0"; }
     details.abstract.inline[open] summary::before { content: "\25BE\00a0"; }
