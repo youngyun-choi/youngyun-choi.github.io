@@ -154,7 +154,7 @@
     .research-section-title {
       font-size: 22px;
       font-weight: 700;
-      color: #777;
+      color: #555;
       margin-bottom: 20px;
     }
 
@@ -206,6 +206,12 @@
     }
 
     .placeholder-text { font-size: 16px; font-weight: 300; color: #999; line-height: 1.8; }
+
+    /* Market figure */
+    .market-figure { margin-top: 56px; max-width: 720px; }
+    .market-photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .market-photo-item img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; }
+    .market-caption { margin-top: 12px; }
 
     /* Research banner */
     .research-banner {
@@ -346,6 +352,7 @@
       .inner-page { padding: 32px 20px; }
       .page-title { font-size: 24px; }
       .research-banner { margin-bottom: 36px; }
+      .market-photos { grid-template-columns: repeat(2, 1fr); }
       .paper-title { font-size: 17px; }
       .paper-line1, .paper-line2 { font-size: 15px; }
       .paper-arrow { display: none; }
@@ -467,9 +474,26 @@
 
       </div>
 
-      <div class="research-banner">
-        <img src="market_expansion.png" alt="AI-detected expansion of a marketplace in North Korea, 2014 to 2024">
-        <div class="about-caption"><em>Marketplace expansion in North Korea, 2014&ndash;2024, detected with AI from high-resolution satellite imagery</em></div>
+      <div class="market-figure">
+        <div class="market-photos">
+          <div class="market-photo-item">
+            <img src="market_2014.jpg" alt="Satellite image of the site in 2014, before the marketplace">
+            <div class="about-caption">2014 &middot; 0 m&sup2;</div>
+          </div>
+          <div class="market-photo-item">
+            <img src="market_2015.jpg" alt="Marketplace detected in 2015">
+            <div class="about-caption">2015 &middot; 6,585 m&sup2;</div>
+          </div>
+          <div class="market-photo-item">
+            <img src="market_2016.jpg" alt="Marketplace detected in 2016">
+            <div class="about-caption">2016 &middot; 8,801 m&sup2;</div>
+          </div>
+          <div class="market-photo-item">
+            <img src="market_2024.jpg" alt="Marketplace detected in 2024">
+            <div class="about-caption">2024 &middot; 11,942 m&sup2;</div>
+          </div>
+        </div>
+        <div class="about-caption market-caption"><em>Emergence and expansion of a marketplace in North Korea, measured using AI and high-resolution satellite imagery (2014&ndash;2024).</em></div>
       </div>
     </div>
   </div>
